@@ -37,7 +37,7 @@ export const MaskedDateInput = forwardRef<HTMLInputElement, Props>((props, ref) 
       ref={ref}
       value={formatDateToString(value)}
       onChange={onChange}
-      placeholder="dd/mm/aaaa"
+      placeholder="Data de nascimento"
       maxLength={10}
     />
   );

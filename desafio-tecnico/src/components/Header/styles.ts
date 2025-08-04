@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Icone from '@src/assets/png/icone2.png';
 
 export const HeaderContainer = styled.header`
   width:100%;
@@ -8,10 +9,16 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 0 2rem;
   box-sizing: border-box;
-
-  img{
-      height: 50px;
-  
-  }
 `;
+
+
+export const IconeWrapper = styled.div`
+  width: 180px;
+  height: 160px;
+  background-image: url(${Icone});
+  background-size: contain;
+  background-repeat: no-repeat ;
+
+`;
+
 

@@ -45,6 +45,9 @@ export function SimulationForm({
       </SelectStyled>
 
       <DatePicker
+        showMonthDropdown
+        showYearDropdown
+        dropdownMode="select"
         selected={birthDate}
         onChange={(date: Date | null) => setBirthDate(date)}
         placeholderText="Data de Nascimento"

@@ -23,7 +23,15 @@ export const FormContainer = styled.div`
     font-family: sans-serif;
     border-radius: 8px;
     overflow: hidden;
+
+  
  }
+ 
+.react-datepicker__year-select {
+ margin:10px;
+}
+
+
 `
 
 export const InputStyled = styled.input`
