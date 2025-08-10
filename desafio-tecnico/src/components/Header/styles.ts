@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Icone from '@src/assets/png/icone2.png';
+import Icone from '@src/assets/png/icon.png';
 
 export const HeaderContainer = styled.header`
   width:100%;
