@@ -17,7 +17,6 @@ function App() {
     interest: ''
   })
 
-  //Função de simular crédito
   const handleSimulate = () => {
     const numericValue = Number(
       loanValue.replace(/[^0-9,]+/g, '').replace(',', '.')
@@ -25,30 +24,24 @@ function App() {
     const months = Number(term)
     if (!numericValue || !months || !birthDate) return
 
-    // Calculo idade
     const today = new Date()
     const age = today.getFullYear() - birthDate.getFullYear()
     const m = today.getMonth() - birthDate.getMonth()
     const isBirthdayPassed = m < 0 || (m === 0 && today.getDate() < birthDate.getDate())
     const finalAge = isBirthdayPassed ? age - 1 : age
-
-    // Determinar taxa anual conforme a faixa etária
+    
     let annualRate = 0
     if (finalAge <= 25) annualRate = 0.05
     else if (finalAge <= 40) annualRate = 0.03
     else if (finalAge <= 60) annualRate = 0.02
     else annualRate = 0.04
 
-    // Converter para taxa mensal
     const monthlyRate = annualRate / 12
-
-    // Aplicar fórmula PMT
     const r = monthlyRate
     const n = months
     const PV = numericValue
     const PMT = (PV * r) / (1 - Math.pow(1 + r, -n))
 
-    // Calcular total e juros
     const totalToPay = PMT * n
     const interestPercent = ((totalToPay - PV) / PV) * 100
 
@@ -60,7 +53,6 @@ function App() {
     })
   }
 
-  //Funções para limpar o formulário
   const handleResetResult = () => {
     setResult({
       installment: '',
