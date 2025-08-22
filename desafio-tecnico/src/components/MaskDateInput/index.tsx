@@ -16,7 +16,7 @@ const StyledInput = styled.input`
 `;
 
 function formatDateToString(dateStr: string) {
-  // Remove tudo que não é número
+
   let val = dateStr.replace(/\D/g, '');
   if (val.length > 8) val = val.slice(0, 8);
 
